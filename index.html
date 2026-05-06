@@ -772,8 +772,8 @@
         <li>
           <iconify-icon icon="lucide:home" width="18" class="ci"></iconify-icon>
           <div class="ct">
-            <strong>Certificado de Instalación Eléctrica Apta <span class="badge req">Obligatorio</span></strong>
-            <small>Emitido por un instalador electricista habilitado. Tiene requisitos muy específicos. Ver Paso 3.</small>
+            <strong>Certificado de Instalación Eléctrica Apta <span class="badge cond">Según el tipo de medidor y demanda</span></strong>
+            <small>Verificar en tabla de Documentos segun tu caso cuando corresponde. Ver Paso 3 para los requisitos exactos.</small>
           </div>
         </li>
         <li>
@@ -797,11 +797,84 @@
         <li>
           <iconify-icon icon="lucide:ruler" width="18" class="ci"></iconify-icon>
           <div class="ct">
-            <strong>Planilla de carga calculada <span class="badge cond">Solo si la potencia supera 12 kW</span></strong>
+            <strong>Planilla de carga calculada <span class="badge cond">Solo si la potencia supera 20 kW</span></strong>
             <small>Debe ser confeccionada por un instalador electricista habilitado.</small>
           </div>
         </li>
       </ul>
+
+      <h2>Documentos según tu caso</h2>
+      <p>Los documentos requeridos varían según tu tipo de medidor y la demanda solicitada. Identificá tu caso en la tabla:</p>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Medidor</th>
+              <th>Demanda solicitada</th>
+              <th>Cambio de equipo</th>
+              <th>Doc. vehículo</th>
+              <th>Planilla de carga</th>
+              <th>Certificado eléctrico</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monofásico</td>
+              <td>≤ 5 kW <em>(sin cambio a trifásico)</em></td>
+              <td>No</td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Monofásico</td>
+              <td>≤ 5 kW <em>(elige cambio a trifásico)</em></td>
+              <td>Sí</td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+              <td>—</td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+            </tr>
+            <tr>
+              <td>Monofásico</td>
+              <td>&gt; 5 kW y ≤ 20 kW</td>
+              <td><div>Sí</div><span class="badge req" style="font-size:.72rem;display:inline-block;margin-top:3px">obligatorio</span></td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+              <td>—</td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+            </tr>
+            <tr>
+              <td>Monofásico</td>
+              <td>&gt; 20 kW</td>
+              <td><div>Sí</div><span class="badge req" style="font-size:.72rem;display:inline-block;margin-top:3px">obligatorio</span></td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+            </tr>
+            <tr>
+              <td>Trifásico</td>
+              <td>≤ 20 kW</td>
+              <td>No</td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>Trifásico</td>
+              <td>&gt; 20 kW</td>
+              <td>No</td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+              <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout aviso">
+        <iconify-icon icon="lucide:alert-triangle" width="16" class="callout-icon" style="color:#b45309"></iconify-icon>
+        <p><strong class="ct">Posible costo por cambio de medidor</strong>
+        Si el trámite requiere o incluye el cambio de equipo monofásico a trifásico, ese cambio tiene un costo adicional. Podés consultar el importe en el <strong>Cuadro Tarifario de EPEC</strong> (disponible en www.epec.com.ar). En caso de continuar, el cargo se incluirá en tu próxima factura.</p>
+      </div>
 
       <div class="doc-nav">
         <a class="doc-nav-btn" href="#" onclick="showSection('paso1-tipos',event)">
@@ -850,7 +923,7 @@
           </div>
           <div class="hbox">
             <iconify-icon icon="lucide:alert-triangle" width="14" style="color:#b45309;margin-top:1px"></iconify-icon>
-            <span>Si el resultado supera los <strong>12 kW</strong>, también debés presentar una planilla de carga calculada por un electricista habilitado.</span>
+            <span>Si el resultado supera los <strong>20 kW</strong>, también debés presentar una planilla de carga calculada por un electricista habilitado.</span>
           </div>
         </div>
       </div>
@@ -983,13 +1056,13 @@
         <iconify-icon icon="lucide:chevron-right" width="12"></iconify-icon>
         Paso 3
       </div>
-      <h1>Paso 3 · Certificado eléctrico apto</h1>
+      <h1>Paso 3 · Certificado de Apto Electrico</h1>
       <p class="subtitle">El documento más importante y específico del trámite. Es fundamental leer esta sección con atención antes de solicitárselo a tu electricista.</p>
 
       <div class="callout alerta">
         <iconify-icon icon="lucide:alert-octagon" width="16" class="callout-icon" style="color:#dc2626"></iconify-icon>
         <p><strong class="ct">El paso donde más solicitudes son rechazadas</strong>
-        El certificado debe cumplir requisitos muy concretos de redacción y tipo de instalación. Si no los cumple, el trámite se rechaza y hay que comenzar de nuevo.</p>
+        El certificado debe cumplir requisitos muy concretos de redacción y tipo de instalación. Si no los cumple, el trámite se rechaza y se debe reiterar en este caso con un nuevo certificado.</p>
       </div>
 
       <p>Navegá los subitems del índice para ver cada requisito en detalle:</p>
@@ -1067,7 +1140,7 @@
         Paso 3 › Requisitos
       </div>
       <h1>Requisitos que debe cumplir el certificado</h1>
-      <p class="subtitle">Cuatro puntos que el certificado tiene que tener sí o sí para ser aceptado por EPEC.</p>
+      <p class="subtitle">Los campos exactos que el certificado debe tener para ser aceptado por EPEC.</p>
 
       <div class="steps">
         <div class="step">
@@ -1080,13 +1153,40 @@
         <div class="step">
           <div class="step-num">B</div>
           <div class="step-body">
-            <h3>Tipo de instalación: ambas opciones marcadas</h3>
-            <p>En el campo <em>"Tipo de instalación certificada"</em>, deben estar seleccionadas <strong>las dos opciones siguientes</strong> (ninguna por sí sola es suficiente):</p>
-            <ul style="margin-top:8px;">
-              <li><strong>MODIFICACIÓN DE INSTALACIÓN EXISTENTE</strong></li>
-              <li><strong>PUNTO DE CONEXIÓN Y MEDICIÓN E INSTALACIÓN DEL USUARIO</strong></li>
-            </ul>
+            <h3>Campos del certificado con valores exactos</h3>
+            <p>El electricista debe completar los siguientes campos con exactamente estos valores:</p>
+            <div class="table-wrap" style="margin-top:10px">
+              <table class="data-table">
+                <thead>
+                  <tr><th>Campo del certificado</th><th>Valor requerido</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tipo de Instalación Certificada</td>
+                    <td><strong>INSTALACIÓN PARA SUMINISTRO DEFINITIVO</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Subtipo de Instalación Certificada</td>
+                    <td><strong>INSTALACIÓN EXISTENTE</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Finalidad de la Instalación</td>
+                    <td>La que corresponda: <strong>INSTALACIÓN DOMICILIARIA</strong>, <strong>PEQUEÑA INSTALACIÓN INDUSTRIAL</strong>, <strong>PEQUEÑA INSTALACIÓN COMERCIAL</strong> o <strong>INSTALACIÓN MAYOR O DE CARACTERÍSTICAS ESPECIALES</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Tipo de Certificado</td>
+                    <td><strong>INST. DEL USUARIO Y PUNTO DE CONEX. Y MEDIC.</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
+        </div>
+
+        <div class="callout alerta" style="margin-top:16px">
+          <iconify-icon icon="lucide:ban" width="16" class="callout-icon" style="color:#dc2626"></iconify-icon>
+          <p><strong class="ct">Certificados de "Modificación" ya no son válidos</strong>
+          A partir de los nuevos requisitos de EPEC, <strong>no se aceptan</strong> certificaciones correspondientes a <em>Modificaciones o Ampliaciones de Instalaciones Existentes</em>. Si el electricista emite el certificado con ese tipo, será rechazado y deberá emitirse uno nuevo con el tipo correcto.</p>
         </div>
         <div class="step">
           <div class="step-num">C</div>
@@ -1212,9 +1312,9 @@
               <td>Indicarle al electricista la sección correcta antes de emitirlo</td>
             </tr>
             <tr>
-              <td>Solo está marcada una de las dos opciones de "Tipo de instalación"</td>
-              <td>Rechazo</td>
-              <td>Verificar que ambas estén seleccionadas antes de firmar</td>
+              <td>El certificado es de tipo "Modificación o Ampliación de Instalación Existente"</td>
+              <td>Rechazo — ese tipo ya no es aceptado por EPEC</td>
+              <td>Solicitar al electricista un certificado con Tipo: <strong>INSTALACIÓN PARA SUMINISTRO DEFINITIVO</strong> y Subtipo: <strong>INSTALACIÓN EXISTENTE</strong></td>
             </tr>
             <tr>
               <td>El domicilio del certificado no coincide con el del contrato</td>
