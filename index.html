@@ -513,7 +513,6 @@
     </a>
     <a class="nav-item sub" data-target="paso3-que-es" href="#" onclick="showSection('paso3-que-es',event)">Qué es y quién lo emite</a>
     <a class="nav-item sub" data-target="paso3-requisitos" href="#" onclick="showSection('paso3-requisitos',event)">Requisitos que debe cumplir</a>
-    <a class="nav-item sub" data-target="paso3-leyenda" href="#" onclick="showSection('paso3-leyenda',event)">La leyenda obligatoria</a>
     <a class="nav-item sub" data-target="paso3-errores" href="#" onclick="showSection('paso3-errores',event)">Errores frecuentes</a>
 
     <a class="nav-item" data-target="paso4" href="#" onclick="showSection('paso4',event)">
@@ -901,7 +900,7 @@
       <p>Es el identificador de tu suministro eléctrico en EPEC. Está impreso en tu <strong>factura de luz</strong>. Si no la tenés a mano, podés consultarlo iniciando sesión en la Oficina Virtual de EPEC.</p>
 
       <h2>Potencia total requerida</h2>
-      <p>Debés informar la suma de la <strong>potencia del cargador del vehículo</strong> (indicada en el manual o en la etiqueta del cargador) más la <strong>demanda actual del domicilio</strong> (figura en tu factura o la puede indicar un electricista).</p>
+      <p>Debés informar la suma de la <strong>demanda actual del domicilio</strong> (figura en tu factura o la puede indicar un electricista) más la <strong>potencia de carga declarada del vehículo</strong> (la potencia a la que el cliente cargará el vehículo, informada al electricista).</p>
 
       <div class="doc-example">
         <div class="doc-example-header">
@@ -914,7 +913,7 @@
             <span class="val">5 kW</span>
           </div>
           <div class="field">
-            <span class="lbl">Potencia del cargador del auto</span>
+            <span class="lbl">Potencia de carga declarada</span>
             <span class="val">7 kW</span>
           </div>
           <div class="field">
@@ -1069,7 +1068,6 @@
       <ul>
         <li><a href="#" onclick="showSection('paso3-que-es',event)">¿Qué es el certificado y quién lo emite?</a></li>
         <li><a href="#" onclick="showSection('paso3-requisitos',event)">Requisitos que debe cumplir</a></li>
-        <li><a href="#" onclick="showSection('paso3-leyenda',event)">La leyenda obligatoria (texto exacto)</a></li>
         <li><a href="#" onclick="showSection('paso3-errores',event)">Errores frecuentes que generan rechazo</a></li>
       </ul>
 
@@ -1092,7 +1090,7 @@
         Paso 3 › Qué es el certificado
       </div>
       <h1>¿Qué es el Certificado Eléctrico Apto?</h1>
-      <p class="subtitle">Un documento oficial que certifica que la instalación eléctrica del domicilio es apta para la carga de vehículos eléctricos.</p>
+      <p class="subtitle">Un documento oficial que certifica el estado de la instalación eléctrica del domicilio ante una modificación en la acometida (cambio de medidor).</p>
 
       <h2>¿Quién lo emite?</h2>
       <p>Lo emite un <strong>instalador electricista habilitado</strong>, inscripto ante el ERSeP (Ente Regulador de Servicios Públicos de Córdoba).</p>
@@ -1100,7 +1098,7 @@
       <h2>¿Para qué sirve en este trámite?</h2>
       <p>EPEC exige el certificado para verificar que:</p>
       <ul>
-        <li>La instalación del domicilio es apta para la carga de vehículos eléctricos.</li>
+        <li>La instalación cumple con la normativa vigente al momento del cambio de medidor.</li>
         <li>Cumple con la reglamentación AEA 90364, parte 7 sección 722.</li>
         <li>El punto de conexión y medición está correctamente instalado.</li>
       </ul>
@@ -1188,101 +1186,12 @@
           <p><strong class="ct">Certificados de "Modificación" ya no son válidos</strong>
           A partir de los nuevos requisitos de EPEC, <strong>no se aceptan</strong> certificaciones correspondientes a <em>Modificaciones o Ampliaciones de Instalaciones Existentes</em>. Si el electricista emite el certificado con ese tipo, será rechazado y deberá emitirse uno nuevo con el tipo correcto.</p>
         </div>
-        <div class="step">
-          <div class="step-num">C</div>
-          <div class="step-body">
-            <h3>Leyenda en la Memoria Descriptiva</h3>
-            <p>En la sección <em>"Descripción de la instalación certificada (Memoria descriptiva)"</em> debe figurar la leyenda exacta. Ver el <a href="#" onclick="showSection('paso3-leyenda',event)">texto exacto requerido →</a></p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">D</div>
-          <div class="step-body">
-            <h3>La leyenda NO puede estar en "Observaciones"</h3>
-            <p>Si el electricista escribe la leyenda en la sección <em>"Observaciones"</em> en lugar de la Memoria Descriptiva, el certificado <strong>será rechazado</strong>. Ver <a href="#" onclick="showSection('paso3-errores',event)">errores frecuentes →</a></p>
-          </div>
-        </div>
       </div>
 
       <div class="doc-nav">
         <a class="doc-nav-btn" href="#" onclick="showSection('paso3-que-es',event)">
           <span class="nav-dir">Anterior</span>
           <span class="nav-label">← ¿Qué es el certificado?</span>
-        </a>
-        <a class="doc-nav-btn next" href="#" onclick="showSection('paso3-leyenda',event)">
-          <span class="nav-dir">Siguiente</span>
-          <span class="nav-label">La leyenda obligatoria</span>
-        </a>
-      </div>
-    </article>
-
-    <!-- ─────────── PASO 3 – LEYENDA ─────────── -->
-    <article class="doc-section" id="sec-paso3-leyenda">
-      <div class="breadcrumb">
-        <iconify-icon icon="lucide:chevron-right" width="12"></iconify-icon>
-        Paso 3 › La leyenda obligatoria
-      </div>
-      <h1>La leyenda obligatoria</h1>
-      <p class="subtitle">El texto exacto que debe aparecer en la sección "Memoria Descriptiva" del certificado.</p>
-
-      <p>Esta leyenda es requerida por EPEC para validar el certificado. Debe estar escrita en la sección correcta y con esta redacción:</p>
-
-      <div class="code-label">Texto exacto — sección "Memoria Descriptiva"</div>
-      <div class="code-block">
-        "La instalación CORRESPONDE Suministro a Vehículos Eléctricos<br>
-        bajo la reglamentación AEA 90364, parte 7 sección 722"
-      </div>
-
-      <div class="callout aviso">
-        <iconify-icon icon="lucide:alert-triangle" width="16" class="callout-icon" style="color:#b45309"></iconify-icon>
-        <p><strong class="ct">¿En qué sección va?</strong>
-        Esta leyenda debe estar únicamente en la sección <em>"Descripción de la instalación certificada (Memoria descriptiva)"</em>. Si el electricista la coloca en <em>"Observaciones"</em>, el certificado será rechazado y deberá emitirse uno nuevo.</p>
-      </div>
-
-      <h2>Ejemplo correcto vs. incorrecto</h2>
-
-      <div class="doc-example">
-        <div class="doc-example-header">
-          <div class="dot verde"></div><div class="dot amarillo"></div><div class="dot rojo"></div>
-          Ejemplo correcto <iconify-icon icon="lucide:check-circle-2" width="13" style="color:#16a34a;margin-left:4px"></iconify-icon>
-        </div>
-        <div class="doc-example-body">
-          <div class="field">
-            <span class="lbl">Descripción de la instalación certificada (Memoria descriptiva)</span>
-            <span class="val ok">"La instalación CORRESPONDE Suministro a Vehículos Eléctricos bajo la reglamentación AEA 90364, parte 7 sección 722"</span>
-          </div>
-          <div class="field">
-            <span class="lbl">Observaciones</span>
-            <span class="val">— (vacío o con información no relacionada)</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="doc-example">
-        <div class="doc-example-header">
-          <div class="dot rojo"></div><div class="dot rojo"></div><div class="dot rojo"></div>
-          Ejemplo incorrecto — genera rechazo <iconify-icon icon="lucide:x-circle" width="13" style="color:#dc2626;margin-left:4px"></iconify-icon>
-        </div>
-        <div class="doc-example-body">
-          <div class="field">
-            <span class="lbl">Descripción de la instalación certificada (Memoria descriptiva)</span>
-            <span class="val error">— (vacío)</span>
-          </div>
-          <div class="field">
-            <span class="lbl">Observaciones</span>
-            <span class="val error">"La instalación CORRESPONDE Suministro a Vehículos Eléctricos..." ← ubicación incorrecta</span>
-          </div>
-          <div class="hbox malo">
-            <iconify-icon icon="lucide:ban" width="14" style="color:#dc2626;margin-top:1px"></iconify-icon>
-            <span>EPEC no puede validar leyendas ubicadas en la sección "Observaciones". Este certificado será rechazado.</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="doc-nav">
-        <a class="doc-nav-btn" href="#" onclick="showSection('paso3-requisitos',event)">
-          <span class="nav-dir">Anterior</span>
-          <span class="nav-label">← Requisitos del certificado</span>
         </a>
         <a class="doc-nav-btn next" href="#" onclick="showSection('paso3-errores',event)">
           <span class="nav-dir">Siguiente</span>
@@ -1306,11 +1215,6 @@
             <tr><th>Error</th><th>Consecuencia</th><th>Cómo evitarlo</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td>La leyenda obligatoria está en "Observaciones" en lugar de la Memoria Descriptiva</td>
-              <td>Rechazo automático</td>
-              <td>Indicarle al electricista la sección correcta antes de emitirlo</td>
-            </tr>
             <tr>
               <td>El certificado es de tipo "Modificación o Ampliación de Instalación Existente"</td>
               <td>Rechazo — ese tipo ya no es aceptado por EPEC</td>
@@ -1348,9 +1252,9 @@
       </div>
 
       <div class="doc-nav">
-        <a class="doc-nav-btn" href="#" onclick="showSection('paso3-leyenda',event)">
+        <a class="doc-nav-btn" href="#" onclick="showSection('paso3-requisitos',event)">
           <span class="nav-dir">Anterior</span>
-          <span class="nav-label">← La leyenda obligatoria</span>
+          <span class="nav-label">← Requisitos del certificado</span>
         </a>
         <a class="doc-nav-btn next" href="#" onclick="showSection('paso4',event)">
           <span class="nav-dir">Siguiente</span>
