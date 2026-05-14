@@ -389,6 +389,16 @@
     }
     .doc-nav-btn:hover { border-color: var(--verde-claro); background: var(--verde-hover); box-shadow: 0 1px 6px rgba(46,125,50,.1); }
     .doc-nav-btn.next { text-align: right; }
+    .btn-link {
+      display: inline-block; margin-top: 8px;
+      padding: 10px 18px;
+      background: var(--verde-fondo); border: 1px solid var(--verde-borde);
+      border-radius: var(--radio); color: var(--verde-medio);
+      font-weight: 600; text-decoration: none;
+      transition: background .15s, border-color .15s;
+    }
+    .btn-link:hover { background: var(--verde-hover); border-color: var(--verde-claro); color: var(--verde); }
+    @media (max-width: 480px) { .btn-link { display: block; text-align: center; } }
     .doc-nav-btn .nav-dir { font-size: .68rem; color: var(--texto-muy-suave); display: block; margin-bottom: 2px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
     .doc-nav-btn .nav-label { font-weight: 600; font-size: .85rem; color: var(--texto); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -519,7 +529,7 @@
       <span class="nav-step-num">4</span>Ingresá a la Oficina Virtual
     </a>
     <a class="nav-item sub" data-target="paso4-acceso" href="#" onclick="showSection('paso4-acceso',event)">Cómo acceder (Nivel 3)</a>
-    <a class="nav-item sub" data-target="paso4-carga" href="#" onclick="showSection('paso4-carga',event)">Cómo cargar los archivos</a>
+<a class="nav-item sub" data-target="paso4-carga" href="#" onclick="showSection('paso4-carga',event)">Cómo cargar los archivos</a>
 
     <div class="sidebar-group-label">Referencia</div>
     <a class="nav-item" data-target="ref-beneficios" href="#" onclick="showSection('ref-beneficios',event)">
@@ -1100,7 +1110,8 @@
       <p class="subtitle">Un documento oficial que certifica el estado de la instalación eléctrica del domicilio ante una modificación en la acometida (cambio de medidor).</p>
 
       <h2>¿Quién lo emite?</h2>
-      <p>Lo emite un <strong>instalador electricista habilitado</strong>, inscripto ante el ERSeP (Ente Regulador de Servicios Públicos de Córdoba).</p>
+      <p>Lo emite un <strong>instalador electricista habilitado</strong>, inscripto ante el ERSeP (Ente Regulador de Servicios Públicos de Córdoba). Podés consultar los que se encuentran en tu localidad a través del registro oficial:</p>
+      <a class="btn-link" href="https://ersep.cba.gov.ar/registros-de-electricistas/" target="_blank" rel="noopener noreferrer">Buscar electricistas habilitados en ERSeP →</a>
 
       <h2>¿Para qué sirve en este trámite?</h2>
       <p>EPEC exige el certificado para verificar que:</p>
@@ -1223,7 +1234,7 @@
           <tbody>
             <tr>
               <td>El certificado es de tipo "Modificación o Ampliación de Instalación Existente"</td>
-              <td>Rechazo — ese tipo ya no es aceptado por EPEC</td>
+              <td>Rechazo — Ese tipo ya no es aceptado por EPEC</td>
               <td>Solicitar al electricista un certificado con Tipo: <strong>INSTALACIÓN PARA SUMINISTRO DEFINITIVO</strong> y Subtipo: <strong>INSTALACIÓN EXISTENTE</strong></td>
             </tr>
             <tr>
@@ -1271,7 +1282,7 @@
         Paso 4
       </div>
       <h1>Paso 4 · Ingresá a la Oficina Virtual</h1>
-      <p class="subtitle">Tu solicitud de Movilidad Eléctrica deberás realizarla mediante tu <strong>OFICINA VIRTUAL</strong> <strong>Nivel 3</strong> accediendo desde nuestra web <a href="https://www.epec.com.ar" target="_blank" rel="noopener noreferrer">www.epec.com.ar</a>.</p>
+      <p class="subtitle">Tu solicitud de Movilidad Eléctrica deberás realizarla mediante tu <strong>OFICINA VIRTUAL</strong> <strong>Nivel 3</strong>.</p>
 
       <div class="steps">
         <div class="step">
@@ -1285,7 +1296,7 @@
           <div class="step-num">2</div>
           <div class="step-body">
             <h3>Nivel para realizar tu solicitud</h3>
-            <p>Para este trámite requerís <strong>Nivel 3</strong>. Esto significa que debés poseer tu identidad validada mediante un ente externo: <strong>Clave Fiscal de ARCA</strong> o <strong>Usuario Nivel 2 de Ciudadano Digital (CiDi)</strong>.</p>
+            <p>Para realizar este trámite necesitás contar con <strong>Nivel 3</strong> de Oficina Virtual.<br>Esto requiere validar tu identidad mediante <strong>Clave Fiscal de ARCA</strong> o <strong>Ciudadano Digital (CiDi)</strong>. En la próxima sección te explicamos cómo.</p>
           </div>
         </div>
         <div class="step">
@@ -1337,21 +1348,48 @@
         Paso 4 › Acceso Nivel 3
       </div>
       <h1>Cómo acceder con Nivel 3</h1>
-      <p class="subtitle">El trámite requiere identidad validada. Hay dos formas de obtener el acceso necesario.</p>
+      <p class="subtitle">Como fue anticipado, la solicitud de tarifa de Movilidad Eléctrica requiere que tengas Nivel 3.</p>
 
-      <h2>Opción 1 · Ciudadano Digital (CiDi)</h2>
-      <p>CiDi es la plataforma del Gobierno de Córdoba para trámites digitales. Para contar con el Nivel 3 debés haber validado tu identidad de forma presencial o a través de la aplicación correspondiente.</p>
-      <ul>
-        <li>Descargá la app <strong>Mi Argentina</strong> o ingresá desde un navegador.</li>
-        <li>Si ya tenés cuenta pero solo en Nivel 1 o 2, debés completar la validación de identidad para acceder al Nivel 3.</li>
-      </ul>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Verificá tus datos</h3>
+            <p>Ingresá a la sección <strong>MIS DATOS</strong> y verificá que tu información personal se encuentre completa y actualizada.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Mi Nivel</h3>
+            <p>Debajo de tus datos personales podrás visualizar el nivel actual de tu Oficina Virtual.</p>
+            <p>Si tenés Nivel 1 o 2, seleccioná la opción <strong>"Gestionar Niveles"</strong>.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Validá tu identidad</h3>
+            <p>Para acceder a Nivel 3 deberás validar tu identidad utilizando alguna de las siguientes plataformas:</p>
+            <ul>
+              <li>Ciudadano Digital (CiDi)</li>
+              <li>Clave Fiscal de ARCA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-      <h2>Opción 2 · Clave Fiscal ARCA</h2>
-      <p>Si ya contás con Clave Fiscal (ex AFIP) con nivel de seguridad suficiente, podés utilizarla para ingresar a la Oficina Virtual de EPEC.</p>
+      <h2>Ciudadano Digital (CiDi)</h2>
+      <p>CiDi es la plataforma digital del Gobierno de Córdoba. Para utilizar esta opción, deberás contar previamente con usuario <strong>Nivel 2</strong>.</p>
+      <a class="btn-link" href="https://cidi.cba.gov.ar/" target="_blank" rel="noopener noreferrer">Obtené tu usuario en CiDi →</a>
+
+      <h2>Clave Fiscal de ARCA</h2>
+      <p>Es el método de identificación digital utilizado por ARCA. Para utilizar esta opción, deberás contar con una clave habilitada con nivel de seguridad suficiente.</p>
+      <a class="btn-link" href="https://www.arca.gob.ar/" target="_blank" rel="noopener noreferrer">Obtené tu usuario en ARCA →</a>
 
       <div class="callout tip">
-        <iconify-icon icon="lucide:info" width="16" class="callout-icon" style="color:#3b82f6"></iconify-icon>
-        <p>Si tenés dudas sobre cómo elevar tu nivel de acceso, podés consultar directamente en las oficinas de EPEC o en el portal de Ciudadano Digital del Gobierno de Córdoba.</p>
+        <iconify-icon icon="lucide:lightbulb" width="16" class="callout-icon" style="color:#3b82f6"></iconify-icon>
+        <p><strong>Importante:</strong> Si todavía no contás con CiDi Nivel 2 o Clave Fiscal habilitada, podrás gestionarlas previamente desde las plataformas oficiales correspondientes.</p>
       </div>
 
       <div class="doc-nav">
@@ -1373,7 +1411,7 @@
         Paso 4 › Cargar archivos
       </div>
       <h1>Cómo cargar los archivos</h1>
-      <p class="subtitle">Consejos para que la carga de documentos sea rápida y sin inconvenientes.</p>
+      <p class="subtitle">Podés adjuntar la documentación requerida en formato PDF, JPG o WORD.</p>
 
       <h2>Formatos aceptados</h2>
       <div class="table-wrap">
@@ -1392,16 +1430,26 @@
 
       <h2>Recomendaciones</h2>
       <ul>
-        <li>Nombrá cada archivo de forma descriptiva antes de subirlo. Ej: <em>certificado-electrico.pdf</em>, <em>tarjeta-verde.jpg</em>.</li>
-        <li>Verificá que el archivo se abra correctamente antes de cargarlo.</li>
-        <li>Si subís fotos tomadas con el celular, asegurate de que el texto sea completamente legible.</li>
-        <li>No combines varios documentos en un solo archivo: cargá cada uno por separado.</li>
+        <li>Verificá que los archivos sean legibles antes de cargarlos.</li>
+        <li>Si utilizás fotos tomadas con el celular, asegurate de que el texto se vea completo y nítido.</li>
+        <li>Si un documento contiene varias páginas, unificalas en un único archivo antes de adjuntarlo.</li>
+        <li>No combines documentación diferente en un mismo archivo. Cada documento debe cargarse por separado.</li>
+        <li>Utilizá nombres descriptivos para identificar fácilmente cada archivo.</li>
       </ul>
+      <p>Ejemplo: <em>certificado-electrico.pdf</em></p>
 
       <div class="callout ok">
         <iconify-icon icon="lucide:check-circle-2" width="16" class="callout-icon" style="color:#16a34a"></iconify-icon>
-        <p><strong class="ct">Todo listo para enviar</strong>
-        Si completaste todos los pasos anteriores y tenés los archivos preparados, ya podés iniciar el trámite en la Oficina Virtual de EPEC en <a href="https://www.epec.com.ar" target="_blank" rel="noopener noreferrer">www.epec.com.ar</a>.</p>
+        <div>
+          <strong class="ct">Todo listo para enviar</strong>
+          <ul style="margin: 8px 0 10px 16px; padding: 0; list-style: disc;">
+            <li>Documentación del vehículo</li>
+            <li>Certificado de Apto Eléctrico <em>(si aplica)</em></li>
+            <li>Documentación de vínculo familiar <em>(si el vehículo está a nombre de un familiar)</em></li>
+            <li>Planilla de carga <em>(si corresponde)</em></li>
+          </ul>
+          <p>Si completaste todos los pasos anteriores y tenés los archivos preparados, ya podés iniciar el trámite en la Oficina Virtual de EPEC en <a href="https://www.epec.com.ar" target="_blank" rel="noopener noreferrer">www.epec.com.ar</a>.</p>
+        </div>
       </div>
 
       <div class="doc-nav">
@@ -1464,9 +1512,6 @@
       </div>
       <h1>Preguntas frecuentes</h1>
       <p class="subtitle">Respuestas a las consultas más habituales sobre el trámite.</p>
-
-      <h3>¿Puedo solicitar la tarifa si el servicio está a nombre de mi cónyuge?</h3>
-      <p>No directamente. El contrato debe estar a <strong>tu nombre</strong>. Primero es necesario cambiar la titularidad del servicio y luego solicitar la tarifa.</p>
 
       <h3>¿El auto tiene que estar a mi nombre?</h3>
       <p>No necesariamente. Si está a nombre de un familiar, podés presentar documentación de vínculo (libreta de familia, acta, etc.) o el DNI del titular si el domicilio coincide con el del servicio. Ver <a href="#" onclick="showSection('paso2-vinculo',event)">Vínculo familiar</a>.</p>
