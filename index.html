@@ -271,6 +271,8 @@
     .callout p { margin: 0; text-align: left; }
     .callout strong { font-size: .93rem; }
     .callout .ct { display: block; margin-bottom: 4px; font-size: .93rem; font-weight: 700; }
+    .callout ol, .callout ul { margin: 0; padding-left: 18px; }
+    .callout li { text-align: left; }
     .callout.aviso  { background: var(--amarillo-bg); border-color: var(--amarillo-borde); border-top: 1px solid var(--amarillo-borde); border-right: 1px solid var(--amarillo-borde); border-bottom: 1px solid var(--amarillo-borde); }
     .callout.alerta { background: var(--rojo-bg);     border-color: var(--rojo-borde);    border-top: 1px solid var(--rojo-borde);    border-right: 1px solid var(--rojo-borde);    border-bottom: 1px solid var(--rojo-borde);    }
     .callout.tip    { background: var(--azul-bg);     border-color: var(--azul-borde);    border-top: 1px solid var(--azul-borde);    border-right: 1px solid var(--azul-borde);    border-bottom: 1px solid var(--azul-borde);    }
@@ -576,6 +578,10 @@
       <iconify-icon icon="lucide:book-open" width="14" style="margin-right:8px;opacity:.6"></iconify-icon>
       ¿De qué trata esta guía?
     </a>
+    <a class="nav-item" data-target="datos" href="#" onclick="showSection('datos',event)">
+      <iconify-icon icon="lucide:info" width="14" style="margin-right:8px;opacity:.6"></iconify-icon>
+      Datos generales
+    </a>
 
     <div class="sidebar-group-label">Pasos del trámite</div>
 
@@ -678,6 +684,56 @@
 
       <div class="doc-nav">
         <div></div>
+        <a class="doc-nav-btn next" href="#" onclick="showSection('datos',event)">
+          <span class="nav-dir">Siguiente</span>
+          <span class="nav-label">Datos generales</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- ─────────── DATOS GENERALES ─────────── -->
+    <article class="doc-section" id="sec-datos">
+      <div class="breadcrumb">
+        <iconify-icon icon="lucide:chevron-right" width="12"></iconify-icon>
+        Introducción
+      </div>
+      <h1>Datos generales</h1>
+
+      <div class="callout aviso">
+        <iconify-icon icon="lucide:info" width="16" class="callout-icon" style="color:#b45309"></iconify-icon>
+        <p><strong class="ct">Solicitud desde la Oficina Virtual</strong>
+        El trámite de solicitud de la Tarifa de Movilidad Eléctrica debe realizarlo el <strong>titular del servicio</strong> desde su Oficina Virtual obligatoriamente.</p>
+      </div>
+
+      <div class="callout ok">
+        <iconify-icon icon="lucide:car" width="16" class="callout-icon" style="color:#16a34a"></iconify-icon>
+        <p><strong class="ct">El vehículo puede estar a nombre de otra persona</strong>
+        El titular del vehículo no tiene que ser necesariamente el titular del servicio eléctrico. Sin embargo, la solicitud debe realizarla siempre el titular del servicio desde la Oficina Virtual del titular del servicio eléctrico.</p>
+      </div>
+
+      <div class="callout ok">
+        <iconify-icon icon="lucide:plug-zap" width="16" class="callout-icon" style="color:#16a34a"></iconify-icon>
+        <p><strong class="ct">Vehículos que pueden registrarse</strong>
+        Cualquier vehículo enchufable, ya sea híbrido o 100 % eléctrico, puede registrarse para solicitar la tarifa, siempre que esté patentado.</p>
+      </div>
+
+      <h2>¿Qué presentar si los titulares son diferentes?</h2>
+      <p>Si el titular del vehículo no es el titular del servicio eléctrico de EPEC, el titular del servicio en su oficina virtual debe adjuntar documentación que acredite el vínculo entre ambas personas. Podés presentar una de las siguientes opciones:</p>
+
+      <div class="callout tip">
+        <iconify-icon icon="lucide:users" width="16" class="callout-icon" style="color:#3b82f6"></iconify-icon>
+        <ol>
+          <li><strong>Cónyuge mencionado en el título del automotor:</strong> si su nombre figura en el título, ese documento es suficiente para acreditar el vínculo.</li>
+          <li><strong>Libreta de familia:</strong> si el nombre no figura en el título del automotor, se debe presentar la libreta de familia que certifique el vínculo, ya sea con la pareja o con los hijos.</li>
+          <li><strong>DNI con el mismo domicilio:</strong> si no se puede presentar la documentación anterior, se debe adjuntar el dorso del DNI donde conste que la persona vive en el domicilio para el cual se solicita la Tarifa de Movilidad Eléctrica.</li>
+        </ol>
+      </div>
+
+      <div class="doc-nav">
+        <a class="doc-nav-btn" href="#" onclick="showSection('intro',event)">
+          <span class="nav-dir">Anterior</span>
+          <span class="nav-label">← ¿De qué trata esta guía?</span>
+        </a>
         <a class="doc-nav-btn next" href="#" onclick="showSection('paso1',event)">
           <span class="nav-dir">Siguiente</span>
           <span class="nav-label">Paso 1: Verificá si podés solicitar</span>
@@ -711,9 +767,9 @@
       <p>El vehículo tiene que estar <strong>inscripto en el DNRPA</strong> (Dirección Nacional de Registros de la Propiedad del Automotor). Podés verificar la radicación en <strong>dnrpa.gov.ar</strong>.</p>
 
       <div class="doc-nav">
-        <a class="doc-nav-btn" href="#" onclick="showSection('intro',event)">
+        <a class="doc-nav-btn" href="#" onclick="showSection('datos',event)">
           <span class="nav-dir">Anterior</span>
-          <span class="nav-label">← Introducción</span>
+          <span class="nav-label">← Datos generales</span>
         </a>
         <a class="doc-nav-btn next" href="#" onclick="showSection('paso1-quien',event)">
           <span class="nav-dir">Siguiente</span>
@@ -889,14 +945,13 @@
       </ul>
 
       <h2>Documentos según tu caso</h2>
-      <p>Los documentos requeridos varían según tu tipo de medidor y la demanda solicitada. Identificá tu caso en la tabla:</p>
+      <p>Los documentos requeridos varían según tu tipo de servicio y la demanda solicitada. Identificá tu caso en la tabla:</p>
       <div class="table-wrap">
         <table class="data-table">
           <thead>
             <tr>
-              <th>Medidor</th>
+              <th>Servicio</th>
               <th>Demanda solicitada</th>
-              <th>Cambio de equipo</th>
               <th>Doc. vehículo</th>
               <th>Planilla de carga</th>
               <th>Certificado eléctrico</th>
@@ -905,16 +960,14 @@
           <tbody>
             <tr>
               <td>Monofásico</td>
-              <td>≤ 5 kW <em>(sin cambio a trifásico)</em></td>
-              <td>No</td>
+              <td>≤ 5 kW <em>(sin cambio a servicio trifásico)</em></td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
               <td>—</td>
               <td>—</td>
             </tr>
             <tr>
               <td>Monofásico</td>
-              <td>≤ 5 kW <em>(elige cambio a trifásico)</em></td>
-              <td>Sí</td>
+              <td>≤ 5 kW <em>(pide cambio a servicio trifásico)</em></td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
               <td>—</td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
@@ -922,7 +975,6 @@
             <tr>
               <td>Monofásico</td>
               <td>&gt; 5 kW y ≤ 20 kW</td>
-              <td><div>Sí</div><span class="badge req" style="font-size:.72rem;display:inline-block;margin-top:3px">obligatorio</span></td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
               <td>—</td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
@@ -930,7 +982,6 @@
             <tr>
               <td>Monofásico</td>
               <td>&gt; 20 kW</td>
-              <td><div>Sí</div><span class="badge req" style="font-size:.72rem;display:inline-block;margin-top:3px">obligatorio</span></td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
@@ -938,7 +989,6 @@
             <tr>
               <td>Trifásico</td>
               <td>≤ 20 kW</td>
-              <td>No</td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
               <td>—</td>
               <td>—</td>
@@ -946,7 +996,6 @@
             <tr>
               <td>Trifásico</td>
               <td>&gt; 20 kW</td>
-              <td>No</td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
               <td><iconify-icon icon="lucide:check-circle-2" width="14" style="color:#16a34a;margin-right:4px"></iconify-icon>Sí</td>
@@ -957,8 +1006,8 @@
 
       <div class="callout aviso">
         <iconify-icon icon="lucide:alert-triangle" width="16" class="callout-icon" style="color:#b45309"></iconify-icon>
-        <p><strong class="ct">Posible costo por cambio de medidor</strong>
-        Si el trámite requiere o incluye el cambio de equipo monofásico a trifásico, ese cambio tiene un costo adicional. Podés consultar el importe en el <strong>Cuadro Tarifario de EPEC</strong> (disponible en www.epec.com.ar). En caso de continuar, el cargo se incluirá en tu próxima factura.</p>
+        <p><strong class="ct">El cambio de medidor se realiza siempre</strong>
+        En <strong>todos los casos</strong>, sin importar el tipo de servicio ni la demanda solicitada, el trámite incluye el cambio del medidor. Lo que puede tener costo es la <strong>tasa de conexión</strong>: podés consultar el importe en el <strong>Cuadro Tarifario de EPEC</strong> (disponible en <a href="https://www.epec.com.ar" target="_blank" rel="noopener noreferrer">www.epec.com.ar</a>). En caso de continuar, el cargo se incluirá en tu próxima factura.</p>
       </div>
 
       <div class="doc-nav">
