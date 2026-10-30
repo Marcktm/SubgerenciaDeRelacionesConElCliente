@@ -491,7 +491,9 @@
 
       /* Saltos de página entre secciones principales */
       #sec-datos, #sec-paso1, #sec-paso2, #sec-paso3, #sec-paso4,
-      #sec-ref-beneficios, #sec-ref-faq { page-break-before: always; }
+      #sec-ref-beneficios, #sec-ref-faq,
+      /* subsecciones cortas que entran en una página: empiezan en página nueva */
+      #sec-paso3-requisitos, #sec-paso3-errores, #sec-paso4-acceso { page-break-before: always; }
 
       /* Tipografía para papel */
       body { font-size: 11pt; color: #000; }
@@ -503,8 +505,21 @@
       /* Mostrar URLs de links externos */
       a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8.5pt; color: #555; }
 
-      /* Evitar cortes dentro de elementos */
-      .step, .callout, li, tr, .checklist li { page-break-inside: avoid; }
+      /* Evitar cortes dentro de elementos (recuadros, tablas, ejemplos, imágenes) */
+      .step, .callout, li, tr, .checklist li,
+      .doc-example, .table-wrap, .hbox, img, svg, figure {
+        break-inside: avoid; page-break-inside: avoid;
+      }
+      .table-wrap { overflow: visible !important; }
+      img { max-width: 100% !important; height: auto; }
+
+      /* Títulos y subtítulos siempre junto a su contenido */
+      h1, h2, h3, .subtitle { break-after: avoid; page-break-after: avoid; }
+      h2, h3, .subtitle { break-inside: avoid; page-break-inside: avoid; }
+      .subtitle + .table-wrap, .subtitle + .steps, h2 + p + .table-wrap { break-before: avoid; page-break-before: avoid; }
+
+      /* Sin líneas sueltas al inicio o fin de página */
+      p, li { orphans: 3; widows: 3; }
 
       /* Márgenes de página A4 */
       @page { margin: 2cm; size: A4; }
