@@ -502,8 +502,21 @@
       h3 { font-size: 11pt; }
       p, li { line-height: 1.5; }
 
-      /* Mostrar URLs de links externos */
-      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 8.5pt; color: #555; }
+      /* Links: hipervínculos clickeables en el PDF, sin imprimir la URL */
+      a { color: #1b5e20; text-decoration: underline; }
+      .btn-link { text-decoration: none; }
+
+      /* Títulos de los Pasos encuadrados */
+      #sec-paso1 > h1, #sec-paso2 > h1, #sec-paso3 > h1, #sec-paso4 > h1 {
+        display: block;
+        border: 2px solid #1b5e20;
+        background: #eef6ee;
+        color: #1b5e20;
+        padding: 9pt 12pt;
+        border-radius: 6px;
+        margin: 0 0 10pt;
+        -webkit-print-color-adjust: exact; print-color-adjust: exact;
+      }
 
       /* Evitar cortes dentro de elementos (recuadros, tablas, ejemplos, imágenes) */
       .step, .callout, li, tr, .checklist li,
